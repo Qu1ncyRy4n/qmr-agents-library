@@ -1,8 +1,13 @@
 # Agents Library Pickup
 
 Date: 2026-09-04
-Status: paused after coding style and error handling; resume with DR/DI records
-and comment preservation
+Historical checkpoint status: paused after coding style and error handling; it
+previously identified DR/DI records and comment preservation as next review work
+
+**Curation status: paused pending the Steve handoff at
+[`/home/qix/dev/cdint/Agents/docs/STEVE-LIBRARY-CURATION-HANDOFF.md`](/home/qix/dev/cdint/Agents/docs/STEVE-LIBRARY-CURATION-HANDOFF.md).
+Do not promote draft candidates or continue per-section adaptation until the
+curator provides the bounded source and scope input.**
 
 ## Purpose
 
@@ -25,6 +30,12 @@ before placing material in agents, skills, guides, or specifications.
 - After writing an active-library Markdown file, open it with `zed <filename>`.
 
 ## Decisions Through This Checkpoint
+
+### Scope Direction
+
+- User decision made 2026-09-08: Retain the TE protocol as
+  organization-canonical and generally reusable. Do not decide its artifact
+  locations or record-naming details from this direction alone.
 
 ### Repository And Source Handling
 
@@ -98,9 +109,28 @@ before placing material in agents, skills, guides, or specifications.
 - Require `gofmt` and `errcheck` for Go changes for now. Preserve moving both to
   a Go-specific guide as a future option.
 
+### DR/DI Source-Of-Truth
+
+- Retain the complete DR/DI authority-and-linking rule as always-loaded guidance
+  for initial dogfooding. Document a future skill-based profile, with a lean
+  toward extracting procedure after dogfooding.
+- Use one global proquint namespace for TODO, TE, DR, and DI. Defer adding DN
+  unless CDINT adopts a DN record type.
+- Retain both the portable DI-author authority invariant in `agents/` and the
+  full DR/DI field schema in a development guide. This matches the current
+  cdint-grid content while keeping record-schema details separable.
+
+### Comment Preservation
+
+- Retain the complete current cdint-grid comment-preservation policy as a strict
+  always-loaded draft candidate. Keep its record-history, audit, and final-report
+  procedures under marked subheadings for possible later skill extraction.
+
 ## Active Library Written So Far
 
 - `agents/decision-first.md`
+- `agents/decision-record-authority.md`
+- `agents/comment-preservation.md`
 - `agents/diff-discipline.md`
 - `agents/error-handling.md`
 - `agents/go-basic-workflow.md`
@@ -109,6 +139,7 @@ before placing material in agents, skills, guides, or specifications.
 - `agents/skill-use.md`
 - `agents/thought-experiments.md`
 - `guides/development/go-coding-style.md`
+- `guides/development/dr-di-record-schema.md`
 - `guides/development/go-layout.md`
 - `guides/development/planning-records.md`
 - `guides/promisegrid/promise-action-minimalism.md`
@@ -123,20 +154,16 @@ diff discipline as a CDINT-wide default.
 
 ## Remaining First-Document Review
 
-1. DR/DI records and comment-preservation policy.
-2. DR record format and source-of-truth boundaries.
-3. Testing guidance and commit workflow.
-4. Glossary and terminology handling.
-5. Final handoff, compliance, and output requirements.
-6. End-to-end audit that every wire-lab source section has an explicit active,
+1. DR record format and source-of-truth boundaries.
+2. Testing guidance and commit workflow.
+3. Glossary and terminology handling.
+4. Final handoff, compliance, and output requirements.
+5. End-to-end audit that every wire-lab source section has an explicit active,
    deferred, repository-local, or rejected disposition.
 
 ## Resume Sequence
 
-1. Read this file and `provenance/questions.md`.
-2. Read `../Agents/docs/wb.md`; replace its paused notice with only the current
-   DR/DI source slices, graphical comparison, and at most five choices.
-3. Continue from
-   `reference/source-guides/promisegrid_wire-lab_refs_heads_main_AGENTS.md:200`.
-4. Keep every displayed source excerpt verbatim.
-5. Open each written active-library Markdown file in Zed.
+1. Read the Steve handoff and `provenance/questions.md`.
+2. Obtain the canonical curated source, per-section scope labels, interface and
+   default decisions, permitted adapters, and curation authority.
+3. Resume only with the bounded dogfood set selected by the curator.

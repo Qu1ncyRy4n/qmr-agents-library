@@ -2,6 +2,41 @@
 
 ## Questions For Steve
 
+### Scope And Placement Boundary
+
+- Define and approve a source-disposition boundary for four scopes: universal,
+  organization-universal, project-specific, and person/machine-specific. Source
+  provenance must not itself classify a rule.
+- Decide the intended output surface for Go and Git material: language/tool
+  guide, triggered skill, specification, organization policy, or another
+  defined layer. The question includes the exact cdint-grid build/test
+  (`/home/qix/dev/cdint/cdint-grid/AGENTS.md:230-262`) and commit
+  (`/home/qix/dev/cdint/cdint-grid/AGENTS.md:1687-1695`) sources, and must
+  separate portable behavior from Go/project command facts.
+- Confirm the placement and naming convention for organization vocabulary:
+  retain `GLOSSARY.md` at repo root, move it under `docs/`, or define an adapter
+  rule. Cite current cdint-grid `AGENTS.md:308-376` and `AGENTS.md:1696-1701`.
+- Define whether `AGENTS.md` is an exact required filename or an adapter-level
+  example for a canonical instruction layer plus non-relaxing role overlays.
+  Cite cdint-grid `AGENTS.md:263-266`. This question is about replacing literal
+  filenames with a target's selected instruction-file convention while
+  retaining the core/overlay rule; it is not proposing removal of the rule.
+- Review the cdint-grid source as a coupled body: determine who has authority to
+  split organization policy, project protocol, tool/language guidance, and
+  personal/machine state. Cite current source ranges for Architecture Precedent
+  `AGENTS.md:377-410`, Testing `AGENTS.md:1644-1686`, and Commit
+  `AGENTS.md:1687-1695`.
+- Preserve TE protocol as organization-canonical and generally reusable.
+  Resolve separately which TE artifact locations and record naming details are
+  organization conventions versus project configuration. Cite `AGENTS.md:1361-1531`.
+
+### Existing Evidence
+
+- `/home/qix/dev/cdint/agents_library/intake/exemplar/wire-lab-exemplar.md:57-72,95-106,278-293`
+- `/home/qix/dev/cdint/Agents/docs/LIBRARY-REVIEW-PLAN.md:44-87`
+- `/home/qix/dev/cdint/Agents/docs/LIBRARY-COVERAGE-AUDIT.md:25-57,122-137`
+- `/home/qix/dev/cdint/Agents/docs/thought-experiments/TE-kavam-metadata-tags-and-library-shape.md:57-59`
+
 - Planning records: confirm root `TODO/` plus proquint handles as the CDINT-wide
   default, replacing wire-lab's per-protocol layout for new work. Current
   treatment: tentative default in `guides/development/planning-records.md`.
