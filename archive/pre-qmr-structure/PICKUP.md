@@ -39,7 +39,7 @@ before placing material in agents, skills, guides, or specifications.
 
 ### Repository And Source Handling
 
-- `/Users/q/Documents/Code/cdint/agents_library` is the active new library.
+- `/Users/q/Documents/Code/cdint/qmr-agents-library` is the active new library.
 - `reference/` contains copied evidence only and is not rendered as active
   library content.
 - Repository-wide `git diff --check` reports pre-existing whitespace in several

@@ -1,12 +1,33 @@
-# Agents Library
+# QMR Agents Library
 
-Active new-library work:
+Personal agent-module library and primary dogfood source.
 
-- `agents/`: always-loaded guidance
-- `skills/`: triggered procedures
-- `guides/`: project guidance; specifications begin under `guides/spec/`
-- `intake/`: material being reviewed for the new library
-- `provenance/`: source and migration records
+## Live Library
 
-`reference/` is copied evidence only. It is not part of the active library and
-must not be rendered or selected as new-library content.
+- `agents/`: always-loaded core guidance.
+- `skills/`: triggered procedures.
+- `specs/`: canonical normative protocols.
+- `guides/`: deeper selectable language, tool, project, and domain guidance.
+- `overlays/`: project, language/tool, or person/machine additions.
+
+The first live modules will be extracted from the reviewed design, not copied
+from the archive.
+
+## Design
+
+[`design/2026-09-14_new_structure.md`](design/2026-09-14_new_structure.md) is
+the current structure and module-design workbench.
+
+## Archive And Evidence
+
+- `archive/agents-libraries-v1/`: exact archive of the former
+  `Agents/libraries/` tree.
+- `archive/pre-qmr-structure/`: pre-cutover QMR candidates, intake, and
+  checkpoints.
+- `reference/`: captured source guides and prior library-design evidence.
+- `provenance/`: source and migration records.
+
+<!--
+Do not render or select archive/ or reference/ content as active library
+modules. New proposals and review notes belong in HTML comments.
+-->
