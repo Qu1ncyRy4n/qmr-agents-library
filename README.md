@@ -30,6 +30,8 @@ dogfoodable personal-library template.
   `Agents/libraries/` tree.
 - `archive/pre-qmr-structure/`: pre-cutover QMR candidates, intake, and
   checkpoints.
+- `archive/provisional-lib-qmr-2026-09-11/`: draft review snapshot with manual
+  approval metadata and candidate review order.
 - `reference/`: captured source guides and prior library-design evidence.
 - `provenance/`: source and migration records.
 

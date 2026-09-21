@@ -20,3 +20,13 @@
 - Verification: 51 files; byte-for-byte identical to `Agents/libraries/` before
   removal from the Agents repository.
 - Status: archived reference evidence only; not active library content.
+
+## Provisional QMR Review Snapshot
+
+- Date: 2026-09-21
+- Source: `Agents/provisional-lib-qmr-2026-09-11/` at commit `6a5ea19`
+- Archive home: `archive/provisional-lib-qmr-2026-09-11/`
+- Status: draft/manual-review snapshot; selection remains disabled by its
+  `library.yaml` and it must not be rendered or promoted directly.
+- Relationship: preserves review wrappers, candidate status, and review order
+  for older QMR candidates; it is not a second active library.
