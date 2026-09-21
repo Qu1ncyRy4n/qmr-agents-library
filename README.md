@@ -10,13 +10,19 @@ Personal agent-module library and primary dogfood source.
 - `guides/`: deeper selectable language, tool, project, and domain guidance.
 - `overlays/`: project, language/tool, or person/machine additions.
 
-The first live modules will be extracted from the reviewed design, not copied
-from the archive.
+The first live core-and-constraints modules have been extracted from the
+reviewed design, not copied from the archive.
 
 ## Design
 
 [`design/2026-09-14_new_structure.md`](design/2026-09-14_new_structure.md) is
 the current structure and module-design workbench.
+
+## Templates
+
+[`templates/core-and-constraints/agents.yaml`](templates/core-and-constraints/agents.yaml)
+selects every current live core-and-constraints module. It is the first
+dogfoodable personal-library template.
 
 ## Archive And Evidence
 
