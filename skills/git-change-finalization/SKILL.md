@@ -1,6 +1,7 @@
 ---
 name: git-change-finalization
 description: Review, stage, and commit a focused change without taking external Git actions unexpectedly. Use when preparing a commit or assessing a working-tree change.
+---
 # Finalize A Focused Git Change
 
 ## Inspect Before Staging

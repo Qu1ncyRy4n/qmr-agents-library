@@ -1,6 +1,7 @@
 ---
 name: shell-command-failures
 description: Handle shell command failures explicitly and preserve meaningful diagnostics. Use when writing or reviewing shell commands, scripts, cleanup, probes, or command orchestration.
+---
 # Handle Shell Command Failures
 
 ## Make Failure Handling Visible

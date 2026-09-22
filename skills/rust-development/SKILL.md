@@ -1,14 +1,26 @@
 ---
 name: rust-development
 description: Develop or review Rust changes with repository-native checks, typed boundaries, and focused tests. Use when changing Rust code, Cargo configuration, or workspace structure.
+---
 # Develop Rust Changes
 
 ## Start With Repository Practice
 
 Read the relevant crate, workspace, documentation, and existing tests. Use a
 documented `just`, `make`, or other repository wrapper when it encodes project
-policy. Otherwise run `cargo fmt`, `cargo check`, and focused `cargo test` for
-the changed crate or behavior.
+policy. Use stable Rust unless the repository explicitly pins another toolchain.
+
+For a strict workspace without a stronger repository command, run:
+
+```sh
+cargo fmt --check
+cargo clippy --workspace --all-targets --all-features -- -D warnings
+cargo test --workspace
+```
+
+During iteration, run focused crate or behavior tests. Run the full workspace
+checks before finalizing a cross-crate, dependency, interface, or persistence
+change.
 
 ## Keep The Boundary Typed And Narrow
 
@@ -28,19 +40,38 @@ Do not add a database, async runtime, GUI framework, or broad dependency unless
 the requested behavior needs it. When dependency files change, run the
 repository's documented lockfile refresh command and include resulting updates.
 
+Do not add optional Rust tools, a nightly toolchain, or a strict lint profile
+without a repository decision. Add development tools through the repository's
+declared environment rather than ad hoc installation.
+
+## Keep Production Paths Strict
+
+For a long-lived Rust project, adopt this Cargo lint profile unless the
+repository has an approved alternative:
+
+```toml
+[lints.clippy]
+unwrap_used = "deny"
+expect_used = "deny"
+panic = "deny"
+todo = "deny"
+unimplemented = "deny"
+unreachable = "deny"
+indexing_slicing = "deny"
+as_conversions = "deny"
+```
+
+Production code must not use unchecked panics, placeholders, indexing, or casts
+that this profile rejects. Use a narrow local `#[allow(..., reason = "...")]`
+only when the invariant is established and the repository permits it. Test code
+may use separately approved exceptions for readable fixtures and assertions.
+
+Do not enable the whole `clippy::pedantic`, `clippy::nursery`, or
+`clippy::restriction` groups. Run their lints as warnings first, then promote
+only proven useful lints to the project profile.
+
 ## Verify
 
 Keep tests deterministic and prefer whole-object equality when it makes failures
 clear. Report the focused checks run, broader checks intentionally omitted, and
 any compatibility or dependency decision that still needs developer approval.
-
-
-## Strict checks / compilation
-
-Run lints and compile checks often,
-# notes / ideas
-Possibly research rust idioms / dialects / patterns?
-https://github.com/NamtaoProductions/namtao-com/blob/main/src/site/notes/My%202026%20Rust%20Toolkit.md
-I think he uses a very strict clippy config thatcould make things even safer.
-
-Don't really know rust super intimately. For all skillsm we should strip out anything pretty generic, or possibly pull and use other peoples rust skills. Please research this, Agent.

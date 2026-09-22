@@ -1,6 +1,7 @@
 ---
 name: maintain-documentation
 description: Update repository documentation, public prose, and design records so they remain accurate, scoped, and useful. Use when changing README files, guides, specifications, or other reader-facing material.
+---
 # Maintain Documentation
 
 ## Keep Related Material Consistent

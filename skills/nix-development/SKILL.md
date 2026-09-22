@@ -1,6 +1,7 @@
 ---
 name: nix-development
 description: Inspect and change Nix project or system configuration safely, preferring non-activating checks and explicit machine-level approval. Use when changing Nix files, flakes, development shells, or host configuration.
+---
 # Develop Nix Changes Safely
 
 ## Choose The Right Boundary

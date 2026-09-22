@@ -1,6 +1,7 @@
 ---
 name: edit-thought-experiment
 description: Edit a filed thought experiment while preserving historical analysis, recording refinements, and superseding substantive conclusions. Use when changing an existing TE.
+---
 # Edit A Filed Thought Experiment
 
 ## Read The Relevant Record
