@@ -57,3 +57,12 @@ is not a skill and should not be loaded as a procedure.
 - Review boundary: the target repository supplies TE statuses, record layout,
   and ID convention. The archived Cat-1a through Cat-7 vocabulary is evidence,
   not required QMR policy.
+
+## Captured CDINT Grid Skills
+
+- Source root: `reference/source-guides/cdint-grid_skills/`
+- Destination: `skills/cdint-grid/`
+- Import: all 18 procedures are verbatim imports plus HTML TBD notes.
+- Review boundary: CDINT-specific executables, worker coordination, identities,
+  and decision records are not QMR authority or portable policy; inspect and
+  dogfood only until dependencies are explicitly configured.
