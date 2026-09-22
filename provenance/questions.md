@@ -1,5 +1,39 @@
 # Open Questions
 
+## QMR Dogfood Review: Wording And Target Fit
+
+These are visible-text issues found while rendering the first
+core-and-constraints template into `todo_app_project`. They are intentionally
+recorded before changing policy language beyond clear spelling corrections.
+
+- `agents/intro/author-ownership.md`: “Documentation of decisionmaking should
+  be a generic agent label” is grammatically incomplete, and the following
+  comma joins two independent instructions. Decide the intended wording and
+  whether “decision making” is one or two words in the library style.
+- `agents/intro/instruction-conflicts.md`: replace informal “dev” with the
+  chosen subject, and decide whether a generic instruction-file term should
+  replace the lowercase literal `agents.md`.
+- `agents/workflow/principled-code-and-tool-use.md`: the opening “We will
+  write with ... principles / patterns” is vague and ungrammatical enough to
+  obscure the requirement. Decide whether the module should state a concrete
+  code-and-tool-use rule instead.
+- `agents/workflow/staged-interface-development.md`: the opening sentence has
+  an unnecessary capital after its colon; the API/CLI/GUI workflow uses uneven
+  capitalization and arrow notation; and “Depending on additional control
+  surfaces, and if they're implemented” is a fragment. Normalize after deciding
+  the desired concise procedure form.
+- `agents/constraints/consult-docs-first.md`: “Do not reinvent the wheel.
+  Consult docs.” is fragmentary by design but may read as telegraphic. The
+  literal `docs/research` does not exist in the first todo-app target; decide
+  whether this should name a generic local research location or be supplied by
+  a target overlay.
+- `agents/constraints/approval-for-costly-actions.md`: the title's “Actions
+  Approval Only” construction is unclear, and “bash appending / pipe editing
+  commands” needs a precise, tool-neutral formulation. Preserve its intent:
+  edits must remain reviewable and trackable.
+- `agents/constraints/security.md`: “Keep service-specific safety procedure”
+  likely needs a plural noun or an explicit reference to a skill.
+
 ## Questions For Steve
 
 ### Scope And Placement Boundary
