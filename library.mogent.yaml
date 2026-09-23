@@ -1,0 +1,52 @@
+schema:
+  id: mogent/1
+
+library:
+  name: QMR Agent Library
+  version: 0.1.0
+  description: Personal QMR agent guidance and skills for Mogent dogfooding and future forks.
+  maintainers:
+    - name: Quincy Ryan
+      email: quincymryan@gmail.com
+  organization:
+    kind: personal
+    name: QMR
+  repository:
+    url: null
+    default_branch: main
+  license: null
+
+content:
+  markdown_roots:
+    - agents
+  directory_roots:
+    - skills
+
+tree:
+  - source: agents/intro
+    title: Intro
+    children:
+      - source: agents/intro/assistant-agent
+      - source: agents/intro/author-ownership-no-agent-signatures
+      - source: agents/intro/flag-agents-md-or-other-conflicts
+
+  - source: agents/workflow
+    title: Workflow / Process
+    children:
+      - source: agents/workflow/principled-code-and-tool-use
+      - source: agents/workflow/developer-decision-involvement-level
+      - source: agents/workflow/decision-first
+        title: Decision First
+        children:
+          - source: agents/workflow/decision-first/plan-ahead
+      - source: agents/workflow/staged-interface-development
+      - source: agents/workflow/use-an-explicit-git-commit-mode
+
+  - source: agents/constraints
+    title: Constraints and Safety
+    children:
+      - source: agents/constraints/focused-change-loop
+      - source: agents/constraints/unknown-work-caution
+      - source: agents/constraints/don-t-reinvent-the-wheel-consult-docs-first
+      - source: agents/constraints/keep-costly-or-irreversible-actions-approval-only-visible-and-trackable
+      - source: agents/constraints/security
