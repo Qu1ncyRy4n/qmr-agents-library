@@ -12,6 +12,10 @@ Depending on additional control surfaces, and if they're implemented:
 - GUI: gui designed -> gui implementation -> (human) usage tests -> feedback and adjustment
 - Network usage: api calls over network implemented -> network tests -> feedback and adjustment
 
+For work that changes an interface or control surface, define bounded, observable behavior. It should be visible through
+CLI output, tests, inspection, or a quantitative metric; avoid features that operate without an inspectable result.
+Prefer explicit read APIs and state changes over hidden mutation where practical.
+
 Apply API -> CLI -> GUI -> network stages only when that surface is changed.
 For API work, show the proposed interface and expected behavior before
 implementation. For CLI work, show usage and expected output. For GUI or other
