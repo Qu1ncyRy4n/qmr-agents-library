@@ -18,11 +18,12 @@ reviewed design, not copied from the archive.
 [`design/2026-09-14_new_structure.md`](design/2026-09-14_new_structure.md) is
 the current structure and module-design workbench.
 
-## Templates
+## Configuration
 
-[`templates/core-and-constraints/agents.yaml`](templates/core-and-constraints/agents.yaml)
-selects every current live core-and-constraints module. It is the first
-dogfoodable personal-library template.
+`library.mogent.hcl` is the live Mogent v2 sidecar. It owns the selectable
+section tree, inline tags, and the declared `skills/` raw tree. The historical
+YAML template under `templates/core-and-constraints/` remains reference material
+until a matching HCL consumer template replaces it.
 
 ## Archive And Evidence
 
