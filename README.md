@@ -21,9 +21,17 @@ the current structure and module-design workbench.
 ## Configuration
 
 `library.mogent.hcl` is the live Mogent v2 sidecar. It owns the selectable
-section tree, inline tags, and the declared `skills/` raw tree. The historical
-YAML template under `templates/core-and-constraints/` remains reference material
-until a matching HCL consumer template replaces it.
+section tree, each branch's `offer`, inline tags and TLDRs, and the declared
+`skills/` raw tree. A consumer starts from it with:
+
+```sh
+mogent init --template qmr-core --source qmr=../qmr-agents-library
+mogent plan
+mogent apply
+```
+
+The historical v1 YAML template is archived under
+`archive/yaml-v1-templates/`.
 
 ## Archive And Evidence
 
