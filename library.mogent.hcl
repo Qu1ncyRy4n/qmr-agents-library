@@ -148,5 +148,10 @@ trees {
       path = "cdint-grid"
       tldr = "CDINT Grid coordination and workflow skills."
     }
+
+    entry "todo-ledger" {
+      path = "todo-ledger"
+      tldr = "Read and update the global todo ledger without cluttering it."
+    }
   }
 }
