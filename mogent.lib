@@ -1,0 +1,44 @@
+library { format = 1; name = "QMR Agent Library" }
+
+md-section "intro" {
+  title = "Intro"
+  tags = ["scope/core", "topic/intro"]
+  curate = "foundation"
+  md-section "assistant-agent" { title = "Assistant Agent"; source = "agents/intro/assistant-agent.md"; tags = ["topic/identity", "topic/role"] }
+  md-section "author-ownership" { title = "Author Ownership, No Agent Signatures"; source = "agents/intro/author-ownership.md"; tags = ["topic/authorship", "scope/constraints"] }
+  md-section "instruction-conflicts" { title = "Flag AGENTS.md Or Other Conflicts"; source = "agents/intro/instruction-conflicts.md"; tags = ["topic/conflicts", "scope/safety"] }
+}
+
+md-section "workflow" {
+  title = "Workflow / Process"
+  tags = ["scope/core", "topic/workflow"]
+  curate = "choose"
+  md-section "principled-code-and-tool-use" { title = "Principled Code And Tool Use"; source = "agents/workflow/principled-code-and-tool-use.md"; default = true; tags = ["tools/guidance"] }
+  md-section "developer-decision-involvement-level" { title = "Developer Decision Involvement Level"; source = "agents/workflow/developer-decision-involvement-level.md"; default = true; tags = ["topic/decision-making"] }
+  md-section "decision-first" { title = "Decision First"; default = true; tags = ["topic/decision-making", "topic/planning"]; md-section "plan-ahead" { title = "Plan Ahead"; source = "agents/workflow/decision-first/plan-ahead.md"; tags = ["topic/planning"] } }
+  md-section "staged-interface-development" { title = "Staged Interface Development"; source = "agents/workflow/staged-interface-development.md"; default = true; tags = ["topic/interfaces"] }
+  md-section "git-commit-mode" { title = "Use An Explicit Git Commit Mode"; source = "agents/workflow/git-commit-mode.md"; default = true; tags = ["tools/git"] }
+}
+
+md-section "constraints" {
+  title = "Constraints and Safety"
+  tags = ["scope/constraints", "scope/core", "scope/safety"]
+  curate = "foundation"
+  md-section "focused-change-loop" { title = "Focused Change Loop"; source = "agents/constraints/focused-change-loop.md"; tags = ["topic/focus", "topic/workflow"] }
+  md-section "unknown-work-caution" { title = "Unknown Work Caution"; source = "agents/constraints/unknown-work-caution.md"; tags = ["topic/change-safety", "topic/ownership"] }
+  md-section "consult-docs-first" { title = "Don't Reinvent The Wheel, Consult Docs First"; source = "agents/constraints/consult-docs-first.md"; tags = ["topic/documentation", "topic/research"] }
+  md-section "approval-for-costly-actions" { title = "Keep Costly Or Irreversible Actions Approval Only, Visible, And Trackable"; source = "agents/constraints/approval-for-costly-actions.md"; tags = ["topic/approval", "topic/irreversible-actions"] }
+  md-section "security" { title = "Security"; source = "agents/constraints/security.md"; tags = ["topic/credentials", "topic/security"] }
+}
+
+dir "skills" {
+  source = "skills"
+  curate = "opt_in"
+  node "git-change-finalization" { role = "skill"; content = "SKILL.md"; tags = ["skill/git-change-finalization", "tools/git"] }
+  node "maintain-documentation" { role = "skill"; content = "SKILL.md"; tags = ["skill/maintain-documentation", "topic/documentation"] }
+  node "nix-development" { role = "skill"; content = "SKILL.md"; tags = ["skill/nix-development", "lang/nix", "tools/nix"] }
+  node "rust-development" { role = "skill"; content = "SKILL.md"; tags = ["skill/rust-development", "lang/rust"] }
+  node "shell-command-failures" { role = "skill"; content = "SKILL.md"; tags = ["skill/shell-command-failures", "tools/shell"] }
+  node "edit-thought-experiment" { role = "skill"; content = "SKILL.md"; tags = ["skill/edit-thought-experiment", "topic/thought-experiments"] }
+  node "preserve-comment-intent" { role = "skill"; content = "SKILL.md"; tags = ["skill/preserve-comment-intent", "topic/comments"] }
+}
